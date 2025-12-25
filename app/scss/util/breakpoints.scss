@@ -1,0 +1,31 @@
+@use 'sass:map';
+// 760px, 1150px, 1400px
+$breakpoints-up: (
+    'medium': '47.5em',
+    'large': '71.875em',
+    'xlarge': '87.5em',
+);
+//759px, 1149px, 1399px
+$breakpoints-down: (
+    'small': '47.4375em',
+    'medium': '71.8125em',
+    'large': '87.4375em',
+);
+@mixin breakpoint($size) {
+    @media (min-width: map.get($breakpoints-up, $size)) {
+        @content;
+    }
+}
+@mixin breakpoint-down($size) {
+    @media (max-width: map.get($breakpoints-down, $size)) {
+        @content;
+    }
+}
+// ## Layout
+
+// The designs were created to the following widths:
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// > 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.

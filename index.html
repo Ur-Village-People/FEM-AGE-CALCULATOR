@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+		<script defer src="script.js"></script>
+
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card container">
+      <section class="card__input-section">
+        <form class="card__input-section__age-form">
+          <div class="card__input-section__age-form__input-group">
+            <div class="card__input-section__age-form__input-group__field">
+              <label for="days">Day</label>
+              <input type="number" id="days" placeholder="DD" required />
+              <span
+                class="card__input-section__age-form__input-group__field__error-msg"
+              ></span>
+            </div>
+            <div class="card__input-section__age-form__input-group__field">
+              <label for="months">Month</label>
+              <input type="number" id="months" placeholder="MM" required />
+              <span
+                class="card__input-section__age-form__input-group__field__error-msg"
+              ></span>
+            </div>
+            <div class="card__input-section__age-form__input-group__field">
+              <label for="years">Year</label>
+              <input type="number" id="years" placeholder="YYYY" required />
+              <span
+                class="card__input-section__age-form__input-group__field__error-msg"
+              ></span>
+            </div>
+          </div>
+          <div class="card__input-section__age-form__submit-container">
+            <div class="card__input-section__age-form__submit-container__divider"></div>
+            <button type="submit" aria-label="Calculate Age">
+              <img src="./assets/images/icon-arrow.svg" alt="" />
+            </button>
+          </div>
+        </form>
+      </section>
+      <section class="card__results-section" aria-live="polite">
+        <p class="card__results-section__result-text">
+          <span id="res-years">--</span> years
+        </p>
+        <p class="card__results-section__result-text">
+          <span id="res-months">--</span> months
+        </p>
+        <p class="card__results-section__result-text">
+          <span id="res-days">--</span> days
+        </p>
+      </section>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
+  </body>
+</html>

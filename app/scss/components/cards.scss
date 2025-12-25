@@ -1,0 +1,105 @@
+@use '../util/' as *;
+.card {
+  max-width: to-rem(840);
+  width: 100%;
+  padding: to-rem(24);
+  background-color: var(--white);
+  border-radius: to-rem(24) to-rem(24) to-rem(100) to-rem(24);
+  @include breakpoint(medium) {
+    padding: to-rem(56);
+  }
+  &__input-section {
+    &__age-form {
+      &__input-group {
+        display: flex;
+        gap: to-rem(14);
+        @include breakpoint(medium) {
+          gap: to-rem(32);
+        }
+        &__field {
+          display: flex;
+          flex-direction: column;
+          gap: to-rem(8);
+          label {
+            font-size: to-rem(14);
+          }
+          input {
+            font-size: to-rem(20);
+            padding: to-rem(12) to-rem(24);
+            width: 100%;
+            border: to-rem(1) solid var(--gray-500);
+            border-radius: to-rem(5);
+            @include breakpoint(medium) {
+              font-size: to-rem(32);
+            }
+          }
+          &__error-msg {
+            display: none; // Hidden by default
+            font-size: to-rem(12);
+            font-style: italic;
+          }
+          &--error {
+            label {
+              color: var(
+                --red-400
+              ); // Define this variable as hsl(0, 100%, 67%)
+            }
+            input {
+              border-color: var(--red-400);
+            }
+            .card__input-section__age-form__input-group__field__error-msg {
+              display: block;
+              color: var(--red-400);
+            }
+          }
+        }
+      }
+      &__submit-container {
+        margin: to-rem(66) 0;
+        position: relative;
+        display: flex;
+        align-items: center;
+        &__divider {
+          width: 100%;
+          height: to-rem(1);
+          background: var(--gray-500);
+        }
+        button {
+          width: to-rem(64);
+          height: to-rem(64);
+          border-radius: 50%;
+          border: none;
+          background-color: var(--purple-500);
+          position: absolute;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          left: 50%;
+          transform: translate(-50%, 0);
+          @include breakpoint(medium) {
+            width: to-rem(96);
+            height: to-rem(96);
+            left: auto;
+            right: 0;
+            transform: none;
+          }
+          img {
+          }
+        }
+      }
+    }
+  }
+  &__results-section {
+    &__result-text {
+      span {
+        color: var(--purple-500);
+        font-weight: 700;
+        font-size: to-rem(56);
+      }
+      color: var(--black);
+      font-weight: 700;
+      font-size: to-rem(56);
+    }
+  }
+}

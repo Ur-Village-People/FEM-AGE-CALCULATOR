@@ -1,0 +1,13 @@
+# Ignore build outputs
+dist/
+build/
+
+# Ignore dependencies
+node_modules/
+
+# Ignore compiled CSS if you are using SCSS
+*.css
+
+# Ignore minified files
+*.min.js
+*.min.css
