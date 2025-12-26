@@ -14,8 +14,14 @@ body {
     min-height: 100vh;
     padding: to-rem(15);
 }
-// ## Typography
-
-// ### Body Copy
-
-// - Font size (inputs): 32px
+.visually-hidden {
+    position: absolute;
+    inset-inline-start: rem(-10000);
+    top: auto;
+    width: rem(1);
+    height: rem(1);
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
